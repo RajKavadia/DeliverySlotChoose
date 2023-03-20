@@ -6,6 +6,12 @@ import 'package:intl/intl.dart';
  * */
 
 class HomePageController extends GetxController {
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+  }
+
   var selectedCollectionIndex = 0.obs;
   var selectedDeliveryIndex = 0.obs;
   var collectionTiming = "".obs;
@@ -16,6 +22,7 @@ class HomePageController extends GetxController {
       DateTime.utc(DateTime.now().year).add(const Duration(days: 2)).obs;
   var collectionDate =
       DateTime.utc(DateTime.now().year).add(const Duration(days: 2)).obs;
+  DateTime? pickedDate;
 
   updateCollectionTime(int index) {
     selectedCollectionIndex.value = index;
@@ -84,7 +91,6 @@ class HomePageController extends GetxController {
     }
   }
 
-  DateTime? pickedDate;
   chooseDate(Rx<DateTime> date) async {
     DateTime? pickedDate = await showDatePicker(
       context: Get.context!,

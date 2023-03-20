@@ -5,7 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 import '../../utils/strings.dart';
-
 class HomePagePage extends GetView<HomePageController> {
   @override
   Widget build(BuildContext context) {
@@ -21,8 +20,7 @@ class HomePagePage extends GetView<HomePageController> {
                 Container(
                   margin: const EdgeInsets.all(20),
                   child: Text(
-                    "Select"
-                    " Collection Date and Time",
+                    "Select"+"Collection Date and Time",
                     style: GoogleFonts.poppins(
                         fontSize: 24, fontWeight: FontWeight.w600),
                   ),
